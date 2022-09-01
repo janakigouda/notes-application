@@ -1,10 +1,10 @@
 export  const getNotes=async ()=>{
-    const res = await fetch(`http://localhost:8000/notes`);
+    const res = await fetch(`https://limitless-forest-83296.herokuapp.com/api/notes`);
     return await res.json();
 }
 
 export  const addNotes=async (notes)=>{
-    const res = await fetch("http://localhost:8000/notes", {
+    const res = await fetch("https://limitless-forest-83296.herokuapp.com/api/notes", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -15,7 +15,7 @@ export  const addNotes=async (notes)=>{
 }
 
 export  const deleteNote=async (id)=>{
-    const res = await fetch(`http://localhost:3000/notes/${id}`, {
+    const res = await fetch(`https://limitless-forest-83296.herokuapp.com/api/notes/${id}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"
